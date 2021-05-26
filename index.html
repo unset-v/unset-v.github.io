@@ -7,5 +7,19 @@
   </head>
   <body>
     <pre>Hi there. I'm a Student in computing. :wq</pre>
+
+    <script>
+    (() => {
+
+    /* night mode from 18 until 6 (exclusive) */
+    const isNight = () =>
+      (h => 17 < h || h < 6)((new Date()).getHours());
+
+    if (isNight())
+      document.body.style.cssText =
+        'background: #22272e; color: #adbac7';
+
+    })();
+    </script>
   </body>
 </html>
